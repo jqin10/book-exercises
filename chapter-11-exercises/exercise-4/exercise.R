@@ -28,7 +28,7 @@ View(flights)
 # For practice, repeat the last 2 steps in a single statement using the pipe
 # operator. You can clear your environmental variables to "reset" the data frame
 flights<- mutate(flights, delayed_in_air =   arr_delay - dep_delay) %>% 
-  arrange(-delayed_in_air)
+  arrange(desc(delayed_in_air))
 
 # Make a histogram of the amount of time gained using the `hist()` function
 hist(flights$delayed_in_air)
