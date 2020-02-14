@@ -16,8 +16,8 @@ base_uri <- "https://api.github.com"
 # `org_resource` that stores the endpoint for the `programming-for-data-science`
 # organization repos (this is the _path_ to the resource of interest).
 
-username <- "orgs/{org}"
-org_resource <- paste0(base_uri, "/users/", username, "/repos{?type,page,per_page,sort}")
+username <- "/orgs"
+org_resource <- paste0(base_uri, username, "/programming-for-data-science/repos")
   
 # Send a GET request to this endpoint (the `base_uri` followed by the 
 # `org_resource` path). Print the response to show that your request worked. 
